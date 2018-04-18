@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:textSize="20dp"
+        android:id="@+id/btn_sunda_baku"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sunda Baku"
+        android:padding="5dp"
+        android:height="40dp"
+        android:textColor="#fff"
+        android:background="#009688"/>
+
+    <TextView
+        android:textSize="20dp"
+        android:padding="5dp"
+        android:height="40dp"
+        android:textColor="#333"
+        android:background="#FBBC05"
+        android:id="@+id/btn_sunda_kuno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sunda Kuno"/>
+
+    <TextView
+        android:textSize="20dp"
+        android:padding="5dp"
+        android:height="40dp"
+        android:textColor="#fff"
+        android:background="#4285F4"
+        android:id="@+id/btn_quiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quiz"/>
+</LinearLayout>
