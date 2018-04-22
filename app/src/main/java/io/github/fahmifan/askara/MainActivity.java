@@ -11,10 +11,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         onBelajarAksaraHandler();
-
-//        onSundaBakuClick();
-//        onSundaKunoClick();
-
 //        onQuizClick();
     }
 
@@ -24,21 +20,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
     }
-
-//    private void onSundaKunoClick() {
-//        findViewById(R.id.btn_sunda_kuno).setOnClickListener(view -> {
-//            Intent intent = new Intent(MainActivity.this, AksaraSundaKuno.class);
-//            startActivity(intent);
-//        });
-//    }
-//
-//    private void onSundaBakuClick() {
-//        findViewById(R.id.btn_sunda_baku).setOnClickListener(view -> {
-//            Intent intent = new Intent(MainActivity.this, AksaraSundaBaku.class);
-//            startActivity(intent);
-//        });
-//
-//    }
 
     private void onQuizClick() {
         findViewById(R.id.btn_quiz).setOnClickListener(view -> {
