@@ -17,7 +17,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".AksaraSundaBaku" />
-        <activity android:name=".AksaraSundaKuno"></activity>
+        <activity android:name=".AksaraSundaKuno" />
+        <activity android:name=".QuizActivity" />
+        <activity android:name=".AksaraActivity">
+            <!-- Parent activity meta-data to support API level 4+ -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.github.fahmifan.askara.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
