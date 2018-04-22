@@ -7,14 +7,20 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AksaraAdapter extends ArrayAdapter<Aksara> {
 
+    private List<Aksara> aksaraList = new ArrayList<>();
+
+
     public AksaraAdapter(@NonNull Context context, ArrayList<Aksara> aksaras) {
         super(context, 0, aksaras);
+        aksaraList = aksaras;
     }
 
     @NonNull
@@ -27,13 +33,24 @@ public class AksaraAdapter extends ArrayAdapter<Aksara> {
                     R.layout.list_item, parent, false);
         }
 
-        Aksara currentAksara = getItem(position);
+        Aksara currentAksara = this.aksaraList.get(position);
 
         // Find the TextView in the list_item.xml layout with ID aksara_text_view
         TextView aksaraTextView = (TextView) listItemView.findViewById(R.id.aksara_text_view);
 
         // Get the aksara word and place it in the set on the TextView
         aksaraTextView.setText(currentAksara.getmAksaraWord());
+
+        // Find the ImageView of the current layout
+        ImageView aksaraImageView = (ImageView) listItemView.findViewById(R.id.image_askara);
+
+        if(currentAksara.isHasImage()) {
+            // Inject the R.id to the current ImageView
+            aksaraImageView.setImageResource(currentAksara.getmImageResourceId());
+            aksaraImageView.setVisibility(View.VISIBLE);
+        } else {
+            aksaraImageView.setVisibility(View.GONE);
+        }
 
         return listItemView;
     }
